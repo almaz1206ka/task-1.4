@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "TT Lakes Regular";
+    font-style: normal;
+    src: url("../fonts/TTLakes-Regular.eot") format('embedded-opentype'),
+    url("../fonts/TTLakes-Regular.ttf") format('ttf'),
+    url("../fonts/TTLakes-Regular.woff") format('woff');
+}
+
+
+
+body, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "TT Lakes Regular";
+}
+
+body{
+    background-color: #ffffff;
+}
+
+.wrapper{
+    width: 320px;
+}
+
+.wrapper__checkbox{
+    display: none;
+}
+
+.wrapper__checkbox:checked ~ .wrapper__button{
+    transform: translateX(-320px);
+}
+.wrapper__checkbox:checked ~ .wrapper__menu{
+    transform: translateX(350px);
+}
+
+.wrapper__button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    padding: 24px 0 0 24px;
+    cursor: pointer;
+    z-index: 1;
+    transition: linear 0.1s;
+}
+
+.wrapper__menu{
+   position: relative;
+   top: 0;
+   left: -350px;
+   width: 320px;
+   height: 100%;
+   background: rgba(255, 255, 255, 1);
+   box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+   display: flex;
+   flex-direction: column;
+   padding-top: 24px;
+   transition: all 0.35s linear;
+   z-index: 1;
+}
+
+
+
+.wrapper__button-header{
+    cursor: pointer;
+}
+.wrapper__header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper__body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    width: 222px;
+}
+.wrapper__body a{
+    height: 24px;
+    border: 4px solid transparent;
+    padding-left: 24px;
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+    white-space: nowrap;
+    margin-bottom: 24px;
+}
+
+.wrapper__body a:hover{
+    border-left: 4px solid rgba(65, 246, 215, 1);
+    color: rgba(126, 126, 130, 1);
+}
+
+.wrapper__footer{
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    margin-top: 224px;
+}
+
+.wrapper__footer-icon{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 16px 15px;
+}
+
+.wrapper__footer a{
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+    margin-right: 7px;
+}
+
+.wrapper__footer-mail{
+    margin: 0 0 12px 24px;
+}
+
+.wrapper__footer-tel{
+    font-weight: bolder;
+    margin: 0 0 40px 24px;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.wrapper__footer-lang{
+    display: flex;
+    margin: 0 0 32px 24px;
+}
+
+.wrapper__footer-lang a:hover{
+    color: rgba(126, 126, 130, 1)
+}
+.wrapper__footer-lang a:focus{
+    color: rgba(126, 126, 130, 1)
+}
